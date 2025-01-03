@@ -17,8 +17,8 @@ const data = search.videos[0];
 const url = data.url; 
 const formatViews = views => views >= 1_000_000_000 ? `${(views / 1_000_000_000).toFixed(1)}B` : views >= 1_000_000 ? `${(views / 1_000_000).toFixed(1)}M` : views >= 1_000 ? `${(views / 1_000).toFixed(1)}K` : views.toString(); 
 let desc = `
-*🎶RUWANTHA-MD🎵*
-🤠 *Title:* ${data.title}
+*🎶DARK-LION-MD🎵*
+💙 *Title:* ${data.title}
 👤 *chenel:* ${data.author.name}
 📝 *Description:* ${data.description}
 ⏰ *Time:* ${data.timestamp}
@@ -30,7 +30,7 @@ const data1 = await fetchJson(`https://apitest1-f7dcf17bd59b.herokuapp.com/downl
 //========
 await conn.sendPresenceUpdate('recording', from); 
 await conn.sendMessage(from, { audio: { url: data1.result.dl_link }, mimetype: "audio/mpeg" }, { quoted: mek }); 
-await conn.sendMessage(from, { document: { url: data1.result.dl_link }, mimetype: "audio/mpeg", fileName: `${data.title}.mp3`, caption: "> RUWANTHA-MD " }, { quoted: mek }); 
+await conn.sendMessage(from, { document: { url: data1.result.dl_link }, mimetype: "audio/mpeg", fileName: `${data.title}.mp3`, caption: "> DARK-LION-MD " }, { quoted: mek }); 
 await conn.sendMessage(from, { react: { text: '✔️', key: mek.key }})
 	    } catch (e) { 
 		    console.log(e); 
